@@ -154,6 +154,7 @@ func GetAgentAddon(controllerContext *controllercmd.ControllerContext) (agent.Ag
 		WithAgentRegistrationOption(registrationOption).
 		WithScheme(policyaddon.Scheme).
 		WithAgentHostedModeEnabledOption().
+		WithInstallStrategy(agent.InstallAllStrategy("open-cluster-management-agent-addon")).
 		BuildHelmAgentAddon()
 }
 
