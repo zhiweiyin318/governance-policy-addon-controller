@@ -17,8 +17,9 @@ import (
 
 var _ = Describe("Test error handling", func() {
 	const (
-		caseNumber   = "case10"
-		yamlBasePath = "../resources/" + caseNumber + "_template_sync_error_test/"
+		caseNumber         = "case10"
+		yamlBasePath       = "../resources/" + caseNumber + "_template_sync_error_test/"
+		nonCompliantPrefix = "NonCompliant; "
 	)
 
 	AfterEach(func() {
@@ -219,6 +220,13 @@ var _ = Describe("Test error handling", func() {
 			defaultTimeoutSeconds,
 			1,
 		).Should(BeTrue())
+
+		By("Checking for the compliance message formatting")
+		Eventually(
+			checkForEvent("case10-bad-hubtemplate", nonCompliantPrefix+nonCompliantPrefix),
+			defaultTimeoutSeconds,
+			1,
+		).Should(BeFalse())
 	})
 	It("should throw a noncompliance event if the template object is invalid", func() {
 		hubApplyPolicy("case10-invalid-severity",
@@ -230,6 +238,13 @@ var _ = Describe("Test error handling", func() {
 			defaultTimeoutSeconds,
 			1,
 		).Should(BeTrue())
+
+		By("Checking for the compliance message formatting")
+		Eventually(
+			checkForEvent("case10-invalid-severity", nonCompliantPrefix+nonCompliantPrefix),
+			defaultTimeoutSeconds,
+			1,
+		).Should(BeFalse())
 	})
 	It("should not throw a noncompliance event if the policy-templates array is empty", func() {
 		hubApplyPolicy("case10-empty-templates",
