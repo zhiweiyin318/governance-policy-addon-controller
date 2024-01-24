@@ -367,8 +367,8 @@ k8s.io/kube-openapi v0.0.0-20230501164219-8b0f38b5fd1f h1:2kWPakN3i/k81b0gvD5C5F
 k8s.io/kube-openapi v0.0.0-20230501164219-8b0f38b5fd1f/go.mod h1:byini6yhqGC14c3ebc/QwanvYwhuMWF6yz2F8uwW8eg=
 k8s.io/utils v0.0.0-20230505201702-9f6742963106 h1:EObNQ3TW2D+WptiYXlApGNLVy0zm/JIBVY9i+M4wpAU=
 k8s.io/utils v0.0.0-20230505201702-9f6742963106/go.mod h1:OLgZIPagt7ERELqWJFomSt595RzquPNLL48iOWgYOg0=
-open-cluster-management.io/addon-framework v0.6.1 h1:gnBZaCRgtiPRjCBJoaRqMivajng/XOKp0NQhJUqLd+U=
-open-cluster-management.io/addon-framework v0.6.1/go.mod h1:Uu4XC3Ec0ATS7U73PJtzAP4NCDfbDBVy1k5RUUwQDqY=
+open-cluster-management.io/addon-framework v0.6.2-0.20240124092750-c667e356bf8e h1:FZFxpVWFTYjiSzv2O602ozQUt9KnPnV9lyNkPQF3VWQ=
+open-cluster-management.io/addon-framework v0.6.2-0.20240124092750-c667e356bf8e/go.mod h1:Uu4XC3Ec0ATS7U73PJtzAP4NCDfbDBVy1k5RUUwQDqY=
 open-cluster-management.io/api v0.10.1 h1:/qv1qfIkAVSz6RQmKGehSv6zYI34Xmb8hK7sIUVmduM=
 open-cluster-management.io/api v0.10.1/go.mod h1:6BB/Y6r3hXlPjpJgDwIs6Ubxyx/kXXOg6D9Cntg1I9E=
 sigs.k8s.io/controller-runtime v0.15.0 h1:ML+5Adt3qZnMSYxZ7gAverBLNPSMQEibtzAgp0UPojU=

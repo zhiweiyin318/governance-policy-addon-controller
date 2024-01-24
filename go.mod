@@ -18,7 +18,7 @@ require (
 	k8s.io/apimachinery v0.27.2
 	k8s.io/client-go v12.0.0+incompatible
 	k8s.io/klog/v2 v2.100.1
-	open-cluster-management.io/addon-framework v0.6.1
+	open-cluster-management.io/addon-framework v0.6.2-0.20240124092750-c667e356bf8e
 	open-cluster-management.io/config-policy-controller v0.11.0
 	open-cluster-management.io/governance-policy-propagator v0.11.1-0.20230608150119-94b4daa84adb
 	sigs.k8s.io/controller-runtime v0.15.0
