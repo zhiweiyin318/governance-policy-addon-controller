@@ -318,7 +318,7 @@ var _ = Describe("Test config-policy-controller deployment", func() {
 					)
 				})
 
-				installNamespace := cluster.clusterName + "-hosted"
+				installNamespace := "klusterlet-" + cluster.clusterName
 
 				setupClusterSecretForHostedMode(
 					ctx, logPrefix, hubClient, "config-policy-controller-managed-kubeconfig",

@@ -120,7 +120,7 @@ var _ = Describe("Test framework deployment", func() {
 			}
 			hubClusterConfig := managedClusterList[0]
 			hubClient := hubClusterConfig.clusterClient
-			installNamespace := cluster.clusterName + "-hosted"
+			installNamespace := "klusterlet-" + cluster.clusterName
 
 			logPrefix := cluster.clusterType + " " + cluster.clusterName + ": "
 
@@ -209,7 +209,7 @@ var _ = Describe("Test framework deployment", func() {
 				}
 				hubClusterConfig := managedClusterList[0]
 				hubClient := hubClusterConfig.clusterClient
-				installNamespace := cluster.clusterName + "-hosted"
+				installNamespace := "klusterlet-" + cluster.clusterName
 
 				logPrefix := cluster.clusterType + " " + cluster.clusterName + ": "
 
@@ -986,6 +986,8 @@ func installAddonInHostedMode(
 				"addon.open-cluster-management.io/hosting-cluster-name": hostingClusterName,
 			},
 		},
+
+		// TODO: the installNamespace should be removed after addon api upgrades to v1beta1
 		"spec": map[string]interface{}{
 			"installNamespace": installNamespace,
 		},
